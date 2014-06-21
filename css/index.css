@@ -1,0 +1,164 @@
+.container-modificado{
+	padding-left: 10px;
+}
+.fundo_armadura{
+	background-color: white;
+}
+#accordion{
+	padding-bottom: 20px;
+}
+.white{
+	background: white;
+	border: 1px medium silver;
+	border-bottom: 1px dotted silver;
+	border-left: 1px medium silver;
+	border-right: 1px medium silver;
+	margin-bottom: 10px;
+}
+.ckeditor-{
+	width: 530px;
+	height: 200px;
+}
+.ficha{
+	color: red;
+}
+#caixa{
+	height: 410px;
+	width: 1150px;
+}
+.thumbnail{
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+.slide{
+	padding: 20px; 
+}
+.TextAreaComent{
+	width: 98.6%;
+}
+.parceiros{
+	padding-left: 8px;
+}
+.img-logo{
+	padding: 5px;
+	margin: 2px;
+}
+.slide-img{
+	height: 600px;
+	width: 500px;
+}
+.display{
+	overflow: auto;
+}
+.logo-bar{
+	background-repeat: repeat-y;
+}
+.top{
+	margin-top: -7px;
+}
+.cinza{
+	background-color: #fbfbfb;
+}
+
+.footer{
+	background-color: black;
+}
+
+.corpo{
+	background-color: #efeeee;
+}
+
+.black{
+	background-color: black;
+}
+.footer-fonte{color:threedshadow;}
+.footer-fonte:hover{color: #fbfbfb;}
+
+
+
+.help_rpg{
+	width:550px;
+	height:250px;
+	text-align:center
+}
+.logo1{
+	background-image:url(../img/background/pic1.jpg);
+	height:250px;
+	width:100%;
+}
+.logo2{
+	background-image:url(../img/background/pic2.jpg);
+	height:250px;
+}
+.logo3{
+	background-image:url(../img/background/pic3.jpg);
+	height:250px;
+}
+.logo4{
+	background-image:url(../img/background/pic4.jpg);
+	height:250px;
+}
+.logo5{
+	background-image:url(../img/background/pic5.jpg);
+	height:250px;
+}
+.logo6{
+	background-image:url(../img/background/pic6.jpg);
+	height:250px;
+}
+.logo7{
+	background-image:url(../img/background/pic7.jpg);
+	height:250px;
+}
+.logo8{
+	background-image:url(../img/background/pic8.jpg);
+	height:250px;
+}
+.logo9{
+	background-image:url(../img/background/pic9.jpg);
+	height:250px;
+}
+.logo10{
+	background-image:url(../img/background/pic10.jpg);
+	height:250px;
+}
+.logo11{
+	background-image:url(../img/background/pic11.jpg);
+	height:250px;
+}
+.logo12{
+	background-image:url(../img/background/pic12.jpg);
+	height:250px;
+}
+.logo13{
+	background-image:url(../img/background/pic13.jpg);
+	height:250px;
+}
+.logo14{
+	background-image:url(../img/background/pic14.jpg);
+	height:250px;
+}
+.logo15{
+	background-image:url(../img/background/pic15.jpg);
+	height:250px;
+}
+.logo16{
+	background-image:url(../img/background/pic16.jpg);
+	height:250px;
+}
+.logo17{
+	background-image:url(../img/background/pic17.jpg);
+	height:250px;
+}
+.logo18{
+	background-image:url(../img/background/pic18.jpg);
+	height:250px;
+}
+.logo19{
+	background-image:url(../img/background/pic19.jpg);
+	height:250px;
+}
+.logo20{
+	background-image:url(../img/background/pic20.jpg);
+	height:250px;
+}

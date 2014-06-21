@@ -1,0 +1,31 @@
+<?php
+menu_bar(
+	SITENAME,
+	array('Nosso Blog',
+		  'Fichas',
+		  'Histórias',
+		  'Aventuras',
+		  'Artefatos',
+		  'Armas',
+		  'Armaduras',
+		  'Escudos',
+		  //'Monstros',
+		  'Sobre',
+		  //'Cadastre-se',
+		  'Login'),
+		  
+	array('?p=blog',
+		  '?p=fichas',
+		  '?p=historias',
+		  '?p=aventuras',
+		  '?p=artefatos',
+		  '?p=armas',
+		  '?p=armaduras',
+		  '?p=escudos',
+		  //'?p=monstros',
+		  '?p=sobre',
+		  //'?p=cadastre_se',
+		  '?p=adm'),
+	0
+	);
+?>

@@ -1,0 +1,4 @@
+<?php
+linksArmasGuia();
+armasMenu();
+?>
