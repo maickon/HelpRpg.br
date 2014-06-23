@@ -37,6 +37,8 @@ $tag->close('div');;
 						
 					$tag->close('div');
 				
+					social_share_plugins($_GET['id']);
+					
 					$comentario_blog = new comentario_blog();
 					$comentario_blog->listar_comentarios($_GET['id']);
 					$tag->open('h4');

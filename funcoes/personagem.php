@@ -15,11 +15,11 @@ function menuLinkPersonagem(){
 					$tag->open('a','href="index.php?p=montar_ficha"');
 						$tag->inprime('Montar o Personagem &rArr;');
 					$tag->close('a');	
-					
+					/*
 					$tag->open('a','href="index.php?p=boss"');
 						$tag->inprime('Chefes de fase &rArr;');
 					$tag->close('a');
-									
+					*/				
 				elseif($_GET['p']=='montar_ficha'):
 					$tag->open('a','href="index.php?p=fichas"');
 						$tag->inprime('Novo personagem &rArr;');						
@@ -31,10 +31,11 @@ function menuLinkPersonagem(){
 						$tag->close('b');
 					$tag->close('a');
 				
+					/*
 					$tag->open('a','href="index.php?p=boss"');
 						$tag->inprime('Chefes de fase &rArr;');
 					$tag->close('a');
-					
+					*/
 				elseif($_GET['p']=='boss'):
 					$tag->open('a','href="index.php?p=fichas"');
 						$tag->inprime('Novo personagem &rArr;');
@@ -44,11 +45,13 @@ function menuLinkPersonagem(){
 						$tag->inprime('Montar o Personagem &rArr;');
 					$tag->close('a');
 					
+					/*
 					$tag->open('a','href="index.php?p=boss"');
 						$tag->open('b');
 							$tag->inprime('Chefes de fase &rArr;');
 						$tag->close('b');
-					$tag->close('a');		
+					$tag->close('a');	
+					*/	
 				endif;
 		
 		$tag->close('div');
@@ -310,7 +313,7 @@ function itemEstatisticas($personagem=null,$armadura){
 			$tag->close('li');
 			
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime(BBA.' '.$personagem->bonus_base_ataque[0].'/'.$personagem->bonus_base_ataque[1].'/'.$personagem->bonus_base_ataque[2].'/'.$personagem->bonus_base_ataque[3]);
+				$tag->inprime(BBA.' '.$personagem->exibir_BBA_base());
 			$tag->close('li');
 			
 			$tag->open('li','class="bullet-item"');
@@ -451,32 +454,48 @@ function itemArmas($preenchido=false){
 	$tag->close('div');
 }
 
-function itemKitInicial($personagem=null){
+function itemKitInicial($preenchido=false,$personagem=null){
 	$tag = new tags();
+	if($preenchido):
+		$itens = $_POST['item_magicos'];
+		$armas = $_POST['arma_descricao'];
+		$armaduras = $_POST['armadura_descricao'];
+		$equipamentos = $_POST['item_comums'];
+	else:
+		$itens = $personagem->itens;
+		$armas =  $personagem->armas;
+		$armaduras = $personagem->armadura;
+		$equipamentos = $personagem->equipamento;
+	endif;
 	$tag->open('div','class="span6"');	
 		$tag->open('ul','class="pricing-table"');
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime(ITENS.' '.$personagem->itens,'decode');
+				$tag->inprime(ITENS.' '.$itens,'decode');
 			$tag->close('li');
 			
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime(ARMAS.' '.$personagem->armas,'decode');
+				$tag->inprime(ARMAS.' '.$armas,'decode');
 			$tag->close('li');
 			
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime(ARMADURAS.' '.$personagem->armadura,'decode');
+				$tag->inprime(ARMADURAS.' '.$armaduras,'decode');
 			$tag->close('li');
 			
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime(EQUIPAMENTOS.' '.$personagem->equipamento,'decode');
+				$tag->inprime(EQUIPAMENTOS.' '.$equipamentos,'decode');
 			$tag->close('li');
 		
 		$tag->close('ul');
 	$tag->close('div');
 }
 
-function itemHistoria($historia_inicio,$historia_meio,$historia_fim,$personagem=null){
+function itemHistoria($preenchido=false,$historia_inicio,$historia_meio,$historia_fim,$personagem=null){
 	$tag = new tags();
+	if($preenchido):
+		$historia = '<b>'.$personagem->nome.'</b>'.$_POST['personagem_historia'];
+	else:
+		$historia = '<b>'.$personagem->nome.'</b>'.$historia_inicio.''.$historia_meio.''.$historia_fim;
+	endif;
 	$tag->open('div','class="span6"');	
 		$tag->open('ul','class="pricing-table"');
 			$tag->open('li','class="bullet-item"');
@@ -484,7 +503,7 @@ function itemHistoria($historia_inicio,$historia_meio,$historia_fim,$personagem=
 			$tag->close('li');
 		
 			$tag->open('li','class="bullet-item"');
-				$tag->inprime('<b>'.$personagem->nome.'</b>'.$historia_inicio.''.$historia_meio.''.$historia_fim);
+				$tag->inprime($historia);
 			$tag->close('li');	
 		$tag->close('ul');	
 	$tag->close('div');

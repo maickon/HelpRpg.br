@@ -65,8 +65,8 @@ endif;
 
 
 $tag->open('div','class="row"');
+	menuLinkPersonagem();
 	$tag->open('form','action="index.php?p=fichas" method="POST" class="custom"');
-		menuLinkPersonagem();
 		itemSelectConjunto();
 	$tag->close('form');	
 $tag->close('div');
@@ -91,18 +91,23 @@ $tag->open('div','class="row"');
 	$tag->open('div','class="span6"');
 		$tag->open('div','class="row"');
 			itemAtaque($personagem);
-			itemArmadura($objeto_armadura,true);
-			itemArmas(true);
+			($_POST['armadura_nome'])||($_POST['armadura_bonus_na_ca'])||($_POST['armadura_tipo'])?$armad_preechido=true:$armad_preechido=false;
+			itemArmadura($objeto_armadura,$armad_preechido);
+			($_POST['arma_nome'])||($_POST['arma_tipo'])||($_POST['arma_dano'])?$arma_preechido=true:$arma_preechido=false;
+			itemArmas($arma_preechido);
 		$tag->close('div');
 	$tag->close('div');
 	
 	$tag->open('div','class="span6"');
 		$tag->open('div','class="row"');
+			($_POST['personagem_historia'])?$hist_preechido=true:$hist_preechido=false;
 			$historia_inicio = new historias();
 			$historia_meio = new historias();
 			$historia_fim = new historias();
-			itemHistoria($historia_inicio->inicio(),$historia_meio->meio(),$historia_fim->fim(),$personagem);
-			itemKitInicial($personagem);
+			itemHistoria($hist_preechido,$historia_inicio->inicio(),$historia_meio->meio(),$historia_fim->fim(),$personagem);
+			
+			($_POST['item_comums'])||($_POST['item_magicos'])||($_POST['armadura_descricao'])||($_POST['arma_descricao'])?$kit_inicial_preechido=true:$kit_inicial_preechido=false;
+			itemKitInicial($kit_inicial_preechido,$personagem);
 		$tag->close('div');
 	$tag->close('div');
 $tag->close('div');

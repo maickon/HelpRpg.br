@@ -3,7 +3,7 @@ function itensInputConjunto($tag){
 		$tag->open('div','class="span12 white"');
 			$tag->open('ul','class=""');
 				$tag->open('div','class="span3"');	
-						input_classe($tag, $objeto_edit=null, $disabled=null);
+					inputSelectClasse($objeto_edit=null, $disabled=null);
 				$tag->close('div');
 						
 				$tag->open('div','class="span3"');	

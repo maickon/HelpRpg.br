@@ -1,19 +1,19 @@
 <?php
 $tag = new tags();
-$tag->open('div','class="countainer"');
+$tag->open('div','class="row"');
 	$tag->open('div','class="span4" slide');
-		contatador();
 		slide();
 	$tag->close('div');
 	
-	$tag->open('div','class="span6" slide');
+	$tag->open('div','class="span6"');
 	
 		$tag->open('h2','align="center"');
-			exibir_titulo($page='home_page',$classe='home_page');
+			plugins();
 		$tag->close('h2');
 		
 		exibir_pagina($page='home_page',$classe='home_page');
-
+	
+		social_plugin_group();
 	$tag->close('div');
 $tag->close('div');
 ?>

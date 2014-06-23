@@ -24,7 +24,7 @@ $tag->open('html','lang=""');
 			$tag->inprime(SITENAME);
 		$tag->close('title');
 		$tag->open('meta','name="viewport" content="width=device-width, initial-scale=1.0"');
-		$tag->open('meta','name="description" content=" RPG Dungens and Drangon D&D Ajudar dogadores do sistema d20');
+		$tag->open('meta','name="description" content="RPG Dungens and Drangon D&D Ajudar dogadores do sistema d20"');
 		$tag->open('meta','name="author" content="Maickon Rangel"');
 		
 		$tag->open('link','rel="shortcut icon" href="img/helpRpg.png"');
@@ -36,7 +36,6 @@ $tag->open('html','lang=""');
 	$tag->close('head');
 
 	$tag->open('body');
-		
 		require 'top-bar.php';	
 		
 		$tag->open('div','class="row top '.rand_logo_bar().'"');

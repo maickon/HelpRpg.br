@@ -1921,6 +1921,23 @@ class Personagem extends habilidades {
 		return $bonus_base_ataque;
 	}
 	
+	function exibir_BBA_base(){
+		
+		if(!empty($this->bonus_base_ataque[0]) && !empty($this->bonus_base_ataque[1]) && !empty($this->bonus_base_ataque[2]) && !empty($this->bonus_base_ataque[3])){
+			$BBA =  $this->bonus_base_ataque[0]." / ".$this->bonus_base_ataque[1]." / ".$this->bonus_base_ataque[2]." / ".$this->bonus_base_ataque[3];
+		}
+		elseif(!empty($this->bonus_base_ataque[0]) && !empty($this->bonus_base_ataque[1]) && !empty($this->bonus_base_ataque[2])){
+			$BBA =  $this->bonus_base_ataque[0]." / ".$this->bonus_base_ataque[1]." / ".$this->bonus_base_ataque[2];
+		}
+		elseif(!empty($this->bonus_base_ataque[0]) && !empty($this->bonus_base_ataque[1])){
+			$BBA =  $this->bonus_base_ataque[0]." / ".$this->bonus_base_ataque[1]." ";
+		}
+		elseif(!empty($this->bonus_base_ataque[0])){
+			$BBA =  $this->bonus_base_ataque[0]." ";
+		}
+		return $BBA;
+	}
+	
 	function exibir_ataque_a_distancia(){
 		
 		$bonus_base_ataque = 0;
@@ -3339,6 +3356,19 @@ class Personagem extends habilidades {
 		}
 		return $this->img;
 	}
+	
+	function equipamento_armadura(){
+		
+	}
+	
+	function equipamento_armas(){
+	
+	}
+	
+	function equipamento_equipamento(){
+	
+	}
+	
 	
 	function equipamentos($classe, $nivel){
 		
